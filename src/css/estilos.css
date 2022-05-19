@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Newton', Courier, monospace;
+    background-color: #171A21;
+}
+
+body::before {
+    content: '';
+    background-image: url("../imagens/1cYrMYF.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cabecalho {
+    position: relative;
+    top: -20px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho .titulo {
+    color: #DB5461;
+    text-transform: uppercase;
+    font-size: 52px;
+    line-height: 102px;
+    -webkit-text-stroke: 2px rgba(224, 28, 10, 0.453);
+}
+
+.selecao-de-agentes { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selecao-de-agentes .personagem-grande {
+    text-align: center;
+    width: 30%;
+    height: 85vh;
+    position: relative;
+    top: -30px;
+}
+
+.selecao-de-agentes .personagem-grande img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.selecao-de-agentes .personagem-grande .nome::before {
+    content: '';
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    background-color: #CCA43B;
+}
+
+.selecao-de-agentes .personagem-grande .nome h2 {
+    color: antiquewhite;
+    font-family: 'command';
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+    font-size: 30px;
+}
+
+.selecao-de-agentes .lista-de-agentes {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    justify-content: center;
+    gap: 12px; 
+}
+
+.selecao-de-agentes .lista-de-agentes .agente {
+    border: 2px solid #CCA43B;
+    background-color: #CCA43B;
+    width: 30%;
+    height: 160px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.15s ease-in-out ;
+}
+
+.selecao-de-agentes .lista-de-agentes .agente img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.selecao-de-agentes .lista-de-agentes .agente.selecionado {
+    border: 2px solid #CCA43B;
+    animation: c-glowing-gold .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao-de-agentes .lista-de-agentes .agente:hover {
+    animation: c-glowing-gold .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.07);
+    z-index: 2;
+}
+
+
+

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Newton';
+    src: url(../fontes/Newton\ Howard\ Font\ Italic.otf);
+}
+
+@font-face {
+    font-family: 'command';
+    src: url('../fontes/pilotcommand1_2.ttf');
+  }
